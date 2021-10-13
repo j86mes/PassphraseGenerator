@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="WordList\" />
+    <None Remove="Dice\" />
+    <None Remove="Resources\" />
+    <None Remove="Resources\eff_large_wordlist.txt" />
+    <None Remove="Resources\eff_memorable_wordlist.txt" />
+    <None Remove="Resources\eff_short_wordlist_1.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="WordList\" />
+    <Folder Include="PassphraseDice\" />
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\eff_large_wordlist.txt">
+      <IncludeInPackage>true</IncludeInPackage>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\eff_memorable_wordlist.txt">
+      <IncludeInPackage>true</IncludeInPackage>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\eff_short_wordlist_1.txt">
+      <IncludeInPackage>true</IncludeInPackage>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>
