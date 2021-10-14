@@ -1,5 +1,5 @@
 # PassphraseGenerator
-.NET Standard library to generate passphrases from the EFF.org wordlists using the Diceware method.
+.NET Standard library to generate passphrases from the [EFF.org wordlists](https://www.eff.org/deeplinks/2016/07/new-wordlists-random-passphrases) using the Diceware method.
 
 There are three wordlists included by default, or you can choose to [implement your own wordlist provider](https://github.com/j86mes/PassphraseGenerator/blob/main/README.md#providing-your-own-wordlist).
 
