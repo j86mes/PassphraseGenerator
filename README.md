@@ -26,13 +26,13 @@ There are three wordlists included by default, or you can choose to [implement y
 To select a wordlist, simply provide one of the IWordListProvider classes to the PassphraseGenerator, or use the default large word list:
 ```
 var largeWordListPassphraseGenerator = new PassphraseGenerator();
-string passphrase = largeWordListPassphraseGenerator.GetNewPassphrase(6, " ");
+string passphrase = largeWordListPassphraseGenerator.CreatePassphrase(6, " ");
 
 var shortWordListPassphraseGenerator = new PassphraseGenerator(new ShortWordListProvider());
-string passphrase = shortWordListPassphraseGenerator.GetNewPassphrase(6, " ");
+string passphrase = shortWordListPassphraseGenerator.CreatePassphrase(6, " ");
 
 var shortMemorableWordListPassphraseGenerator = new PassphraseGenerator(new MemorableWordListProvider());
-string passphrase = shortMemorableWordListPassphraseGenerator.GetNewPassphrase(6, " ");
+string passphrase = shortMemorableWordListPassphraseGenerator.CreatePassphrase(6, " ");
 
 ```
 
@@ -47,5 +47,5 @@ class MyCustomListProvider: IWordListProvider{
 
 ```
 var passphraseGenerator = new PassphraseGenerator(new MyCustomListProvider());
-string passphrase = passphraseGenerator.GetNewPassphrase(6, "-");
+string passphrase = passphraseGenerator.CreatePassphrase(6, "-");
 ```
