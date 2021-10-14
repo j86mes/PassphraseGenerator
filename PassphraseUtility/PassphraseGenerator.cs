@@ -11,7 +11,7 @@ namespace PassphraseUtility
         IWordListProvider _wordListProvider;
 
         /// <summary>
-        /// Default PassphraseGenerator will use the MemorableWordListProvider
+        /// Default PassphraseGenerator will use the LongWordListProvider
         /// </summary>
         public PassphraseGenerator()
         {
