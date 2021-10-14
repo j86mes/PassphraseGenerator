@@ -16,7 +16,7 @@ namespace PassphraseUtility
         /// </summary>
         public PassphraseGenerator()
         {
-            _wordListProvider = new MemorableWordListProvider();
+            _wordListProvider = new LongWordListProvider();
         }
 
         public PassphraseGenerator(IWordListProvider wordListProvider)
