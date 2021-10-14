@@ -38,12 +38,7 @@ namespace PassphraseUtility
                     currentKey.Append(dice.Roll());
                 }
 
-                words.Add(currentKey.ToString());
-            }
-
-            for (int currentWordIndex = 0; currentWordIndex < words.Count; currentWordIndex++)
-            {
-                words[currentWordIndex] = _wordListProvider.WordForKey(words[currentWordIndex]);
+                words.Add(_wordListProvider.WordForKey(currentKey.ToString()));
             }
 
             return string.Join(separator, words);
