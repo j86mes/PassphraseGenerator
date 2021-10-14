@@ -23,7 +23,7 @@ namespace PassphraseUtility
             _wordListProvider = wordListProvider;
         }
 
-        public string GetNewPassphrase(int numberOfWords, string separator)
+        public string CreatePassphrase(int numberOfWords, string separator)
         {
             var dice = new Dice((short)_wordListProvider.IndexDiceSize());
 

@@ -17,7 +17,7 @@ namespace PassphraseUtilityTests
         {
             var ppGenerator = new PassphraseGenerator(new ShortWordListProvider());
 
-            Assert.IsNotNull(ppGenerator.GetNewPassphrase(5, " "));
+            Assert.IsNotNull(ppGenerator.CreatePassphrase(5, " "));
         }
 
         [Test]
@@ -25,7 +25,7 @@ namespace PassphraseUtilityTests
         {
             var ppGenerator = new PassphraseGenerator(new MemorableWordListProvider());
 
-            Assert.IsNotNull(ppGenerator.GetNewPassphrase(5, " "));
+            Assert.IsNotNull(ppGenerator.CreatePassphrase(5, " "));
         }
 
         [Test]
@@ -33,7 +33,7 @@ namespace PassphraseUtilityTests
         {
             var ppGenerator = new PassphraseGenerator(new LongWordListProvider());
 
-            Assert.IsNotNull(ppGenerator.GetNewPassphrase(5, " "));
+            Assert.IsNotNull(ppGenerator.CreatePassphrase(5, " "));
         }
 
         [Test]
@@ -43,7 +43,7 @@ namespace PassphraseUtilityTests
 
             int words = 5;
             string separator = "_";
-            string passphrase = ppGenerator.GetNewPassphrase(words, separator);
+            string passphrase = ppGenerator.CreatePassphrase(words, separator);
 
             int numberOfSeparators = passphrase.Count(c => c == '_');
 
